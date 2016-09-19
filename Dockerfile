@@ -107,8 +107,7 @@ RUN mkdir /etc/nginx/conf.d && \
     mkdir -p /etc/nginx/pki && \
     chmod 400 /etc/nginx/pki && \
     mkdir /var/www/fc && \
-    mkdir /var/www/fc/html && \
-    chmod -R 755 /var/www/fc/html
+    mkdir /var/www/fc/html
 
 # Copy configs
 COPY nginx.conf /etc/nginx/nginx.conf
