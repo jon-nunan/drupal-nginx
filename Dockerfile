@@ -105,7 +105,10 @@ RUN mkdir /etc/nginx/conf.d && \
     chmod 755 /var/lib/nginx && \
     chmod -R 755 /var/lib/nginx/tmp && \
     mkdir -p /etc/nginx/pki && \
-    chmod 400 /etc/nginx/pki
+    chmod 400 /etc/nginx/pki && \
+    mkdir /var/www/fc && \
+    mkdir /var/www/fc/html && \
+    chmod -R 755 /var/www/fc/html
 
 # Copy configs
 COPY nginx.conf /etc/nginx/nginx.conf
@@ -113,8 +116,8 @@ COPY fastcgi_params /etc/nginx/fastcgi_params
 COPY drupal* /opt/
 COPY xhgui.conf /etc/nginx/conf.d/
 
-WORKDIR /var/www/html
-VOLUME /var/www/html
+WORKDIR /var/www/fc/html
+VOLUME /var/www/fc/html
 
 EXPOSE 80 443
 
