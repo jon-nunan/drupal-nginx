@@ -112,6 +112,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY fastcgi_params /etc/nginx/fastcgi_params
 COPY drupal* /opt/
 COPY xhgui.conf /etc/nginx/conf.d/
+COPY drupal7 /etc/nginx/conf.d/
 
 WORKDIR /var/www/fc/html
 VOLUME /var/www/fc/html
