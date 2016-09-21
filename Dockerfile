@@ -105,7 +105,8 @@ RUN mkdir /etc/nginx/conf.d && \
     chmod 755 /var/lib/nginx && \
     chmod -R 755 /var/lib/nginx/tmp && \
     mkdir -p /etc/nginx/pki && \
-    chmod 400 /etc/nginx/pki
+    chmod 400 /etc/nginx/pki && \
+    mkdir /var/logs/nginx/
 
 # Copy configs
 COPY nginx.conf /etc/nginx/nginx.conf
