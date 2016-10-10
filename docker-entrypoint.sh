@@ -17,7 +17,7 @@ fi
 
 # Configure docroot.
 if [ -n "$NGINX_DOCROOT" ]; then
-    sed -i 's@root /var/www/fc/html/;@'"root /var/www/fc/html/${NGINX_DOCROOT};"'@' /etc/nginx/conf.d/*.conf
+    sed -i 's@root /var/www/html/;@'"root /var/www/html/${NGINX_DOCROOT};"'@' /etc/nginx/conf.d/*.conf
 fi
 
 # Ensure server name defined.
