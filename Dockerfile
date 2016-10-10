@@ -116,8 +116,8 @@ COPY drupal* /opt/
 COPY xhgui.conf /etc/nginx/conf.d/
 COPY drupal7.conf /etc/nginx/conf.d/
 
-WORKDIR /var/www/fc/html
-VOLUME /var/www/fc/html
+WORKDIR /var/www/html
+VOLUME /var/www/html
 
 EXPOSE 80 443
 
